@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "routes": [
+    {
+      "src": "/api/stats",
+      "dest": "/api/stats.js"
+    },
+    {
+      "src": "/api/bookings(/.*)?",
+      "dest": "/api/bookings.js"
+    },
+    {
+      "src": "/api/newsletter",
+      "dest": "/api/newsletter.js"
+    },
+    {
+      "src": "/api/consultations",
+      "dest": "/api/consultations.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
