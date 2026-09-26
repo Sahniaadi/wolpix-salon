@@ -1,0 +1,41 @@
+[
+  {
+    "id": "bkg_1",
+    "refCode": "WPX-7842",
+    "name": "Elena Rostova",
+    "phone": "+1 (555) 382-9104",
+    "email": "elena.rostova@luxury.com",
+    "service": "Bespoke Bridal Couture",
+    "date": "2026-09-28",
+    "time": "11:00 AM",
+    "requests": "Trial session for autumn wedding in Lake Como. Silk veil integration.",
+    "status": "pending",
+    "createdAt": "2026-09-24T14:30:00.000Z"
+  },
+  {
+    "id": "bkg_2",
+    "refCode": "WPX-9120",
+    "name": "Sophia Laurent",
+    "phone": "+1 (555) 720-4491",
+    "email": "sophia.laurent@vogue.fr",
+    "service": "Editorial & Haute Couture",
+    "date": "2026-09-29",
+    "time": "02:00 PM",
+    "requests": "Paris Fashion Week preview photoshoot look. Glass skin emphasis.",
+    "status": "confirmed",
+    "createdAt": "2026-09-24T16:15:00.000Z"
+  },
+  {
+    "id": "bkg_3",
+    "refCode": "WPX-4355",
+    "name": "Aria Chen",
+    "phone": "+1 (555) 890-1122",
+    "email": "aria.chen@artistry.io",
+    "service": "Red Carpet Signature Glam",
+    "date": "2026-09-30",
+    "time": "04:30 PM",
+    "requests": "Charity Gala evening gala look. Metallic gold accents.",
+    "status": "pending",
+    "createdAt": "2026-09-25T08:00:00.000Z"
+  }
+]

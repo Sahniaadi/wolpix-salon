@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Management Suite | WOLFPix Salon Haute Artistry</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    body {
+      background-color: var(--obsidian);
+      color: var(--text-primary);
+      min-height: 100vh;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .admin-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .admin-title-group h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+      background: var(--aurora-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .admin-title-group p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .admin-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .admin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.9rem;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      color: var(--cyan);
+      font-weight: 600;
+    }
+    .admin-badge .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .stat-card {
+      background: var(--glass-bg-dark);
+      border: 1px solid rgba(59, 130, 246, 0.18);
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: blur(16px);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .stat-value {
+      font-size: 2.2rem;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
+      color: #fff;
+    }
+    .stat-subtext {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 0.4rem;
+    }
+    .tabs-nav {
+      display: flex;
+      gap: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 2rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .tab-btn:hover {
+      color: var(--text-light);
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .tab-btn.active {
+      color: #fff;
+      background: rgba(59, 130, 246, 0.2);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+    }
+    .table-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .search-filter-box {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+    .admin-input, .admin-select {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: 8px;
+      padding: 0.65rem 1rem;
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .admin-input:focus, .admin-select:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+    }
+    .admin-table-container {
+      background: var(--glass-bg-dark);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 16px;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    }
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .admin-table th {
+      background: rgba(15, 23, 42, 0.9);
+      padding: 1rem 1.25rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    .admin-table td {
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+      vertical-align: middle;
+    }
+    .admin-table tr:hover {
+      background: rgba(59, 130, 246, 0.04);
+    }
+    .ref-code {
+      font-family: monospace;
+      font-weight: 700;
+      color: var(--champagne-gold);
+      background: rgba(212, 175, 106, 0.1);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 106, 0.25);
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    .status-confirmed {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .status-pending {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .status-completed {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    .status-cancelled {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+    .action-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-dim);
+      padding: 0.35rem 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: all 0.2s ease;
+    }
+    .action-btn:hover {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #f87171;
+    }
+    .status-select {
+      background: rgba(10, 15, 30, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      outline: none;
+      cursor: pointer;
+    }
+    .empty-state {
+      padding: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    .manual-book-card {
+      background: var(--glass-bg-dark);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 650px;
+    }
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    @media (max-width: 768px) {
+      .form-grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .admin-table th, .admin-table td {
+        padding: 0.75rem 0.6rem;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Header -->
+    <header class="admin-header">
+      <div class="admin-title-group">
+        <h1>WOLFPix Studio Suite</h1>
+        <p>Haute Artistry Operations & Reservation Management Console</p>
+      </div>
+      <div class="admin-actions">
+        <div class="admin-badge">
+          <span class="pulse-dot"></span>
+          <span>Backend Server Active (Port 3000)</span>
+        </div>
+        <a href="/" class="btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.88rem; text-decoration: none;">← Client Website</a>
+      </div>
+    </header>
+
+    <!-- Top Metrics Overview -->
+    <section class="stats-grid" id="statsOverview">
+      <div class="stat-card">
+        <div class="stat-label">Total Reservations</div>
+        <div class="stat-value" id="statTotalBookings">-</div>
+        <div class="stat-subtext">All-time salon reservations</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Confirmed Sessions</div>
+        <div class="stat-value" id="statConfirmed" style="color: #34d399;">-</div>
+        <div class="stat-subtext">Active upcoming bookings</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pending Approval</div>
+        <div class="stat-value" id="statPending" style="color: #fbbf24;">-</div>
+        <div class="stat-subtext">Awaiting studio confirmation</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">VIP Subscribers</div>
+        <div class="stat-value" id="statSubscribers" style="color: var(--cyan);">-</div>
+        <div class="stat-subtext">Haute Gazette VIP list</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Beauty Consultations</div>
+        <div class="stat-value" id="statConsultations" style="color: var(--rose-champagne);">-</div>
+        <div class="stat-subtext">Interactive quiz leads</div>
+      </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <nav class="tabs-nav">
+      <button class="tab-btn active" data-tab="bookingsTab">✨ Salon Reservations</button>
+      <button class="tab-btn" data-tab="subscribersTab">📰 VIP Newsletter Subscribers</button>
+      <button class="tab-btn" data-tab="consultationsTab">🔍 Consultation Diagnostic Leads</button>
+      <button class="tab-btn" data-tab="manualBookTab">➕ Manual Reservation</button>
+    </nav>
+
+    <!-- TAB 1: Salon Reservations -->
+    <div class="tab-content" id="bookingsTab">
+      <div class="table-controls">
+        <div class="search-filter-box">
+          <input type="text" id="bookingSearchInput" class="admin-input" placeholder="Search by client name, code, or phone..." style="min-width: 280px;">
+          <select id="statusFilterSelect" class="admin-select">
+            <option value="all">All Statuses</option>
+            <option value="confirmed">Confirmed</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </div>
+        <button id="refreshBookingsBtn" class="btn-secondary" style="padding: 0.6rem 1rem; font-size: 0.85rem;">🔄 Refresh</button>
+      </div>
+
+      <div class="admin-table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Ref Code</th>
+              <th>Client</th>
+              <th>Service</th>
+              <th>Date & Time</th>
+              <th>Special Requests</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="bookingsTableBody">
+            <tr>
+              <td colspan="7" class="empty-state">Loading reservations from server...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 2: Subscribers -->
+    <div class="tab-content" id="subscribersTab" style="display: none;">
+      <div class="table-controls">
+        <p style="color: var(--text-dim); margin: 0;">Clients subscribed to the WOLFPix Haute Gazette.</p>
+        <button id="exportSubscribersBtn" class="btn-secondary" style="padding: 0.6rem 1rem; font-size: 0.85rem;">📥 Export CSV</button>
+      </div>
+      <div class="admin-table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>VIP Client Email</th>
+              <th>Subscribed Date</th>
+            </tr>
+          </thead>
+          <tbody id="subscribersTableBody">
+            <tr>
+              <td colspan="3" class="empty-state">Loading subscribers...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: Consultations -->
+    <div class="tab-content" id="consultationsTab" style="display: none;">
+      <div class="table-controls">
+        <p style="color: var(--text-dim); margin: 0;">Diagnostic profiles submitted from the 8-Step Interactive Consultation Quiz.</p>
+        <button id="refreshConsultationsBtn" class="btn-secondary" style="padding: 0.6rem 1rem; font-size: 0.85rem;">🔄 Refresh</button>
+      </div>
+      <div class="admin-table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Recommended Style</th>
+              <th>Skin Type</th>
+              <th>Finish</th>
+              <th>Coverage</th>
+              <th>Occasion</th>
+              <th>Created Date</th>
+            </tr>
+          </thead>
+          <tbody id="consultationsTableBody">
+            <tr>
+              <td colspan="6" class="empty-state">Loading consultations...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 4: Manual Reservation Form -->
+    <div class="tab-content" id="manualBookTab" style="display: none;">
+      <div class="manual-book-card">
+        <h3 style="font-family: 'Cinzel', serif; font-size: 1.4rem; margin-bottom: 1.25rem; color: #fff;">Direct Concierge Reservation</h3>
+        <form id="adminManualBookForm">
+          <div class="form-grid-2">
+            <div>
+              <label style="display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 0.4rem;">Client Full Name</label>
+              <input type="text" id="manualName" class="admin-input" style="width: 100%;" required placeholder="e.g. Genevieve Thorne">
+            </div>
+            <div>
+              <label style="display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 0.4rem;">Phone Number</label>
+              <input type="tel" id="manualPhone" class="admin-input" style="width: 100%;" required placeholder="+1 (555) 000-0000">
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div>
+              <label style="display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 0.4rem;">Email Address</label>
+              <input type="email" id="manualEmail" class="admin-input" style="width: 100%;" required placeholder="client@domain.com">
+            </div>
+            <div>
+              <label style="display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 0.4rem;">Curated Artistry Service</label>
+              <select id="manualService" class="admin-select" style="width: 100%;" required>
+                <option value="Bespoke Bridal Couture">Bespoke Bridal Couture</option>
+                <option value="Editorial & Haute Couture">Editorial & Haute Couture</option>
+                <option value="Red Carpet Signature Glam">Red Carpet Signature Glam</option>
+                <option value="Age-Defying Radiance">Age-Defying Radiance</option>
+                <option value="Celebrity Airbrush Perfection">Celebrity Airbrush Perfection</option>
+                <option value="Haute Private Masterclass">Haute Private Masterclass</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div>
+              <label style="display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 0.4rem;">Reservation Date</label>
+              <input type="date" id="manualDate" class="admin-input" style="width: 100%;" required>
+            </div>
+            <div>
+              <label style="display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 0.4rem;">Appointment Time</label>
+              <select id="manualTime" class="admin-select" style="width: 100%;" required>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="11:00 AM" selected>11:00 AM</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="02:30 PM">02:30 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="06:00 PM">06:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 0.4rem;">Concierge Notes / Requests</label>
+            <textarea id="manualRequests" class="admin-input" style="width: 100%; min-height: 80px;" placeholder="Specific preferences, venue or VIP notes..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="padding: 0.8rem 2rem; font-size: 0.95rem;">Confirm & Save Reservation</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

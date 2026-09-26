@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sub_1",
+    "email": "victoria.sterling@luxurylife.co",
+    "subscribedAt": "2026-09-24T11:20:00.000Z"
+  },
+  {
+    "id": "sub_2",
+    "email": "camille.dupont@fashionweek.org",
+    "subscribedAt": "2026-09-24T18:45:00.000Z"
+  },
+  {
+    "id": "sub_3",
+    "email": "clara.vance@hautebeauty.com",
+    "subscribedAt": "2026-09-25T07:15:00.000Z"
+  }
+]

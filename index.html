@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOLFPix Salon — Luxury Beauty & Makeup Studio | Where Beauty Meets Precision</title>
+  <meta name="description" content="WOLFPix Salon is an award-winning luxury beauty studio specializing in precision makeup artistry, age-defying skin preparation, bridal elegance, and personalized consultations. Modern beauty. Timeless confidence.">
+  <meta name="theme-color" content="#09090B">
+  
+  <!-- Open Graph & Social Meta -->
+  <meta property="og:title" content="WOLFPix Salon — Where Beauty Meets Precision">
+  <meta property="og:description" content="Luxury makeup artistry, skincare diagnostics, and high-fashion beauty experiences tailored to your skin tone and texture.">
+  <meta property="og:type" content="website">
+
+  <!-- Design System & Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css?v=dark2">
+  <link rel="stylesheet" href="css/components.css?v=dark2">
+  <link rel="stylesheet" href="css/responsive.css?v=dark2">
+</head>
+<body>
+
+  <!-- Ambient Aurora Backdrops -->
+  <div class="aurora-backdrop" aria-hidden="true">
+    <div class="aurora-orb aurora-orb-1"></div>
+    <div class="aurora-orb aurora-orb-2"></div>
+    <div class="aurora-orb aurora-orb-3"></div>
+    <div class="aurora-orb aurora-orb-4"></div>
+  </div>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         1. NAVIGATION BAR
+         ==================================================================== -->
+    <header class="site-header" id="siteHeader">
+      <div class="container">
+        <nav class="nav-container" aria-label="Main Navigation">
+          <!-- Logo -->
+          <a href="#hero" class="brand-logo" id="navLogo">
+            <span class="brand-symbol">W</span>
+            <div style="display: flex; flex-direction: column;">
+              <span class="brand-text">WOLFPix <span class="gradient-text">Salon</span></span>
+              <span class="brand-sub">Studio Haute Beauté</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <ul class="nav-links" id="desktopNavLinks">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#artistry" class="nav-link">About</a></li>
+            <li><a href="#timeless" class="nav-link">Timeless Beauty</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#looks" class="nav-link">Looks</a></li>
+            <li><a href="#skin-matrix" class="nav-link">Skin Matrix</a></li>
+            <li><a href="#consultation" class="nav-link">Beauty Consultation</a></li>
+            <li><a href="#journal" class="nav-link">Journal</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+
+          <!-- Right Action Buttons -->
+          <div class="nav-actions">
+            <!-- Search Trigger -->
+            <button type="button" class="search-trigger-btn" id="searchTriggerNav" aria-label="Search Salon Experience">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <span>Search</span>
+              <span class="search-kbd">⌘K</span>
+            </button>
+
+            <!-- Book Now CTA -->
+            <a href="#booking" class="btn btn-primary btn-sm" id="navBookBtn">Book Now</a>
+
+            <!-- Mobile Menu Toggle -->
+            <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-content">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="brand-logo">
+              <span class="brand-symbol">W</span>
+              <span class="brand-text">WOLFPix <span class="gradient-text">Salon</span></span>
+            </div>
+            <button type="button" class="modal-close-btn" id="mobileDrawerClose" aria-label="Close Mobile Menu" style="position: static;">✕</button>
+          </div>
+          <ul class="mobile-nav-links">
+            <li><a href="#hero" class="mobile-nav-link">Home <span>→</span></a></li>
+            <li><a href="#artistry" class="mobile-nav-link">Artistry Experience <span>→</span></a></li>
+            <li><a href="#timeless" class="mobile-nav-link">Timeless Beauty (Age-Defying) <span>→</span></a></li>
+            <li><a href="#services" class="mobile-nav-link">Services <span>→</span></a></li>
+            <li><a href="#looks" class="mobile-nav-link">Signature Looks <span>→</span></a></li>
+            <li><a href="#skin-matrix" class="mobile-nav-link">Skin Tone & Texture <span>→</span></a></li>
+            <li><a href="#consultation" class="mobile-nav-link">Beauty Consultation <span>→</span></a></li>
+            <li><a href="#transformation" class="mobile-nav-link">Before & After <span>→</span></a></li>
+            <li><a href="#journal" class="mobile-nav-link">Beauty Journal <span>→</span></a></li>
+            <li><a href="#booking" class="mobile-nav-link">Book Appointment <span>→</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <a href="#booking" class="btn btn-aurora btn-lg" style="width: 100%; text-align: center;">Book Your Look</a>
+          <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem;">“Where Beauty Meets Precision.”</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         2. HERO SECTION
+         ==================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Content -->
+          <div class="hero-content">
+            <div class="badge badge-aurora hero-header-badge">
+              <span class="badge-dot"></span>
+              <span>WOLFPix Luxury Studio • Fall / Winter Edition</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Beauty, <br><span class="gradient-text">Refined.</span>
+            </h1>
+
+            <p class="hero-subtext">
+              Personalized makeup, skincare and beauty experiences crafted to enhance your natural features and express your individual style.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#booking" class="btn btn-aurora btn-lg" id="heroPrimaryCta">
+                <span>Book Your Look</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#services" class="btn btn-glass btn-lg" id="heroSecondaryCta">
+                <span>Explore Services</span>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat-item">
+                <span class="hero-stat-number">100%</span>
+                <span class="hero-stat-label">Custom Undertone Match</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-number">16h+</span>
+                <span class="hero-stat-label">Weightless Longevity</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-number">5.0★</span>
+                <span class="hero-stat-label">Luxury Client Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Editorial Visual & Floating Glass Consultation Card -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-frame">
+              <img 
+                src="images/hero-portrait.png" 
+                alt="WOLFPix Studio Haute Editorial Model Portrait - Woman with Long Hair" 
+                class="hero-image"
+                id="heroMainImage"
+                loading="eager"
+              >
+              <div class="hero-image-gradient"></div>
+            </div>
+
+
+
+            <!-- Floating Studio Tag Pill -->
+            <div class="hero-tag-pill">
+              <span style="color: var(--cyan);">✦</span> Haute Editorial Precision
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. MAKEUP ARTIST EXPERIENCE & PHILOSOPHY
+         ==================================================================== -->
+    <section class="section" id="artistry">
+      <div class="artistry-section">
+        <div class="artistry-aurora"></div>
+        <div class="artistry-grid">
+          <div class="artistry-header">
+            <span class="badge badge-aurora" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--cyan);">Master Artistry Philosophy</span>
+            <h2 class="section-title" style="margin-top: 1rem; color: white;">
+              Precision Artistry. <br><span class="gradient-text">Masterful Technique.</span>
+            </h2>
+            <p style="color: var(--text-dim); margin-top: 1rem; line-height: 1.7; font-size: 1.05rem;">
+              At WOLFPix Salon, our senior makeup artists are seasoned masters of structural facial anatomy, micro-textures, and spectral color theory. Rather than layering heavy masks, our artisans sculpt light to celebrate your authentic features.
+            </p>
+
+            <div class="artistry-tags-wrap">
+              <span class="artistry-pill"><span>✦</span> Enhances Natural Features</span>
+              <span class="artistry-pill"><span>✦</span> Customized Beauty Looks</span>
+              <span class="artistry-pill"><span>✦</span> Runway & Modern Fashion Trends</span>
+              <span class="artistry-pill"><span>✦</span> Deep Undertone Calibration</span>
+              <span class="artistry-pill"><span>✦</span> Diverse Skin Textures</span>
+              <span class="artistry-pill"><span>✦</span> Mature, Dry, Oily & Combination</span>
+              <span class="artistry-pill"><span>✦</span> Traditional & Modern Techniques</span>
+              <span class="artistry-pill"><span>✦</span> Advanced Optical Color Theory</span>
+              <span class="artistry-pill"><span>✦</span> Clean Performance Formulations</span>
+              <span class="artistry-pill"><span>✦</span> Skincare Preparation Rituals</span>
+            </div>
+          </div>
+
+          <!-- Artistry Technique Bento Card -->
+          <div class="artistry-bento-card">
+            <div class="technique-item">
+              <div class="technique-icon">🧬</div>
+              <div class="technique-content">
+                <h4>Micro-Texture & Barrier Diagnostics</h4>
+                <p>We analyze hydration gradients across the T-zone, orbital eye contour, and expression lines to calibrate exact skin primer molecular weights.</p>
+              </div>
+            </div>
+
+            <div class="technique-item">
+              <div class="technique-icon">🎨</div>
+              <div class="technique-content">
+                <h4>Spectral Undertone Formulation</h4>
+                <p>Custom-blending pigment droplets with olive, peach, cool blue, or warm golden correctors to eradicate ashy cast and oxidation entirely.</p>
+              </div>
+            </div>
+
+            <div class="technique-item">
+              <div class="technique-icon">💎</div>
+              <div class="technique-content">
+                <h4>Atmospheric Light Reflection</h4>
+                <p>Strategically placing micro-fine pearls and light-reflecting serums that capture ambient candlelight, studio strobes, and 4K digital optics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. AGE-DEFYING MAKEUP — "TIMELESS BEAUTY"
+         ==================================================================== -->
+    <section class="section timeless-section" id="timeless">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-gold">Specialized Masterclass Feature</span>
+          <h2 class="section-title" style="margin-top: 0.75rem;">Timeless Beauty</h2>
+          <p class="section-subtitle">
+            Enhancing natural beauty, vitality, and confidence through strategic hydration, soft facial dimension, and featherweight textures—celebrating every chapter of life.
+          </p>
+        </div>
+
+        <!-- Real Client Consultation Case Banner -->
+        <div class="case-study-banner">
+          <div>
+            <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.08em; color: #B58A3E;">Featured Client Consultation Scenario</span>
+            <div class="case-study-quote">
+              “I need help creating an age-defying look for a client attending her 50th birthday celebration.”
+            </div>
+          </div>
+          <a href="#booking" class="btn btn-primary" onclick="window.openBookingForService('Age-Defying Makeup')">
+            Create My Signature Look
+          </a>
+        </div>
+
+        <!-- 11-Step Interactive Workflow Explorer -->
+        <div class="workflow-container">
+          <!-- Step Selector Column -->
+          <div class="workflow-steps-list" id="workflowStepsList" role="tablist" aria-label="11-Step Timeless Beauty Workflow">
+            <!-- Populated dynamically via app.js -->
+          </div>
+
+          <!-- Step Details Card -->
+          <div class="workflow-details-card">
+            <div>
+              <div class="workflow-detail-header">
+                <div>
+                  <span class="workflow-step-index-badge" id="workflowStepIndexBadge">Step 1 of 11 • Professional Artistry Protocol</span>
+                  <h3 class="workflow-detail-title" id="workflowDetailTitle">Analyze Skin Type & Texture</h3>
+                </div>
+                <span class="badge badge-aurora">Clinical Precision</span>
+              </div>
+
+              <div class="workflow-detail-body" id="workflowDetailBody">
+                Perform a tactile and visual skin barrier assessment. We map hydration levels, identify micro-dryness around expression areas, and examine pore dynamics under 5500K daylight simulation to prevent texture exaggeration.
+              </div>
+
+              <div class="workflow-pro-tip">
+                <strong>✦ Senior Artist Pro-Tip:</strong>
+                <p id="workflowProTipBody">
+                  For our 50th birthday client, we identified dehydration at the outer perimeters and subtle forehead expression lines that require water-binding emollients rather than powder.
+                </p>
+              </div>
+            </div>
+
+            <!-- Workflow Navigation Controls -->
+            <div class="workflow-nav-controls">
+              <button type="button" class="btn btn-glass btn-sm" id="workflowPrevStep">
+                ← Previous Step
+              </button>
+              <span style="font-size: 0.8125rem; color: var(--text-muted); font-weight: 600;">Explore the 11-Step Master Protocol</span>
+              <button type="button" class="btn btn-primary btn-sm" id="workflowNextStep">
+                Next Step →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. SERVICES (12 LUXURY SERVICES)
+         ==================================================================== -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-aurora">Artistry Offerings</span>
+          <h2 class="section-title" style="margin-top: 0.75rem;">Curated Beauty Services</h2>
+          <p class="section-subtitle">
+            Every appointment is an immersive luxury ritual featuring bespoke skin preparation, customized shade mixing, and runway-proven longevity.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="services-filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all">All Services (12)</button>
+          <button type="button" class="filter-btn" data-filter="signature">Signature & Glam</button>
+          <button type="button" class="filter-btn" data-filter="events">Event & Bridal</button>
+          <button type="button" class="filter-btn" data-filter="editorial">Editorial & Camera</button>
+          <button type="button" class="filter-btn" data-filter="specialized">Skin & Hair</button>
+        </div>
+
+        <!-- 12 Services Grid -->
+        <div class="services-grid" id="servicesGrid">
+          
+          <!-- 1. Signature Makeup -->
+          <div class="service-card" data-category="signature">
+            <div class="service-card-media">
+              <img src="images/photo3.jpg" alt="Signature Makeup Look at WOLFPix Salon" class="service-img" loading="lazy">
+              <span class="service-card-badge">Most Requested</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">✨</div>
+                  <span class="service-duration">75 Mins</span>
+                </div>
+                <h3 class="service-title">Signature Makeup</h3>
+                <p class="service-desc">The definitive WOLFPix look: customized lightweight complexion, soft dimensional contouring, refined eyes, and long-wearing satin lips.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$185</span>
+                  <span class="service-price-note">/ session</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Signature Makeup')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Party Makeup -->
+          <div class="service-card" data-category="signature">
+            <div class="service-card-media">
+              <img src="images/photo2.jpg" alt="Party Makeup Look" class="service-img" loading="lazy">
+              <span class="service-card-badge">High Impact</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">🪩</div>
+                  <span class="service-duration">90 Mins</span>
+                </div>
+                <h3 class="service-title">Party Makeup</h3>
+                <p class="service-desc">Luminous evening glam engineered for night lighting. Dramatic smoky eyes or bold cat-eye wings with smudge-proof 14-hour endurance.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$210</span>
+                  <span class="service-price-note">/ session</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Party Makeup')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Birthday Makeup -->
+          <div class="service-card" data-category="events">
+            <div class="service-card-media">
+              <img src="images/photo1.jpg" alt="Birthday Makeup" class="service-img" loading="lazy">
+              <span class="service-card-badge">Celebration</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">🥂</div>
+                  <span class="service-duration">75 Mins</span>
+                </div>
+                <h3 class="service-title">Birthday Makeup</h3>
+                <p class="service-desc">Tailored celebratory glamour designed to turn heads and dazzle in birthday photography, featuring sparkling champagne pearl highlights.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$195</span>
+                  <span class="service-price-note">/ session</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Birthday Makeup')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Bridal Makeup -->
+          <div class="service-card" data-category="events">
+            <div class="service-card-media">
+              <img src="images/photo4.jpg" alt="WOLFPix Bridal Makeup Artistry" class="service-img" loading="lazy">
+              <span class="service-card-badge">Haute Couture</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">💍</div>
+                  <span class="service-duration">120 Mins</span>
+                </div>
+                <h3 class="service-title">Bridal Makeup</h3>
+                <p class="service-desc">The pinnacle of luxury bridal beauty. Tear-resistant, flash-calibrated perfection with bespoke lip touch-up vial and luxury silk lash application.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$380</span>
+                  <span class="service-price-note">/ trial incl.</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Bridal Makeup')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Engagement Makeup -->
+          <div class="service-card" data-category="events">
+            <div class="service-card-media">
+              <img src="images/photo4.jpg" alt="Engagement Makeup" class="service-img" loading="lazy">
+              <span class="service-card-badge">Romantic</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">🕊️</div>
+                  <span class="service-duration">80 Mins</span>
+                </div>
+                <h3 class="service-title">Engagement Makeup</h3>
+                <p class="service-desc">Romantic, ethereal luminescence designed for golden hour engagement sessions and intimate celebratory parties with your loved ones.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$225</span>
+                  <span class="service-price-note">/ session</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Engagement Makeup')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Editorial Makeup -->
+          <div class="service-card" data-category="editorial">
+            <div class="service-card-media">
+              <img src="images/photo5.jpg" alt="Editorial Fashion Makeup" class="service-img" loading="lazy">
+              <span class="service-card-badge">Vogue Grade</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">🎨</div>
+                  <span class="service-duration">105 Mins</span>
+                </div>
+                <h3 class="service-title">Editorial Makeup</h3>
+                <p class="service-desc">Haute couture fashion concepts, architectural graphic liner, experimental color gradients, and avant-garde textural artistry for publication.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$295</span>
+                  <span class="service-price-note">/ session</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Editorial Makeup')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Photoshoot Makeup -->
+          <div class="service-card" data-category="editorial">
+            <div class="service-card-media">
+              <img src="images/photo6.jpg" alt="Photoshoot Makeup" class="service-img" loading="lazy">
+              <span class="service-card-badge">4K Studio Calibrated</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">📸</div>
+                  <span class="service-duration">90 Mins</span>
+                </div>
+                <h3 class="service-title">Photoshoot Makeup</h3>
+                <p class="service-desc">Formulated specifically for high-definition 8K camera sensors and strobe lighting to ensure zero flashback and flawless skin uniformity.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$240</span>
+                  <span class="service-price-note">/ session</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Photoshoot Makeup')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Age-Defying Makeup -->
+          <div class="service-card" data-category="signature">
+            <div class="service-card-media">
+              <img src="images/photo3.jpg" alt="Age-Defying Makeup for Mature Skin" class="service-img" loading="lazy">
+              <span class="service-card-badge">Specialty</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">⏳</div>
+                  <span class="service-duration">85 Mins</span>
+                </div>
+                <h3 class="service-title">Age-Defying Makeup</h3>
+                <p class="service-desc">Our celebrated 11-step protocol for 40+, 50+, 60+ skin. High-potency moisture binding, targeted concealing, and uplifting dimension.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$220</span>
+                  <span class="service-price-note">/ session</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Age-Defying Makeup')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Skin Preparation -->
+          <div class="service-card" data-category="specialized">
+            <div class="service-card-media">
+              <img src="images/photo7.jpg" alt="Skin Preparation Ritual" class="service-img" loading="lazy">
+              <span class="service-card-badge">Skincare Ritual</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">💧</div>
+                  <span class="service-duration">45 Mins</span>
+                </div>
+                <h3 class="service-title">Skin Preparation</h3>
+                <p class="service-desc">Standalone or add-on skin reboot: cryo lymphatic sculpting, sonic micro-cleansing, peptide infusion mask, and barrier primer veil.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$110</span>
+                  <span class="service-price-note">/ session</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Skin Preparation')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Makeup Consultation -->
+          <div class="service-card" data-category="specialized">
+            <div class="service-card-media">
+              <img src="images/photo2.jpg" alt="Personalized Makeup Consultation" class="service-img" loading="lazy">
+              <span class="service-card-badge">Diagnostic</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">🧭</div>
+                  <span class="service-duration">60 Mins</span>
+                </div>
+                <h3 class="service-title">Makeup Consultation</h3>
+                <p class="service-desc">One-on-one masterclass diagnosing your skin tone, undertone, product chemistry, bag audit, and custom beauty blueprint.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$150</span>
+                  <span class="service-price-note">/ session</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Makeup Consultation')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Hair Styling -->
+          <div class="service-card" data-category="specialized">
+            <div class="service-card-media">
+              <img src="images/photo1.jpg" alt="WOLFPix Haute Hair Styling" class="service-img" loading="lazy">
+              <span class="service-card-badge">Haute Coiffure</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">✂️</div>
+                  <span class="service-duration">60 Mins</span>
+                </div>
+                <h3 class="service-title">Hair Styling</h3>
+                <p class="service-desc">Signature luxury blowouts, red-carpet Hollywood waves, modern textured chignons, and structured editorial updos.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$140</span>
+                  <span class="service-price-note">/ session</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Hair Styling')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Hair & Makeup Packages -->
+          <div class="service-card" data-category="events">
+            <div class="service-card-media">
+              <img src="images/photo3.jpg" alt="WOLFPix Hair and Makeup Luxury Package" class="service-img" loading="lazy">
+              <span class="service-card-badge">Complete Luxury</span>
+            </div>
+            <div class="service-card-body">
+              <div>
+                <div class="service-icon-row">
+                  <div class="service-icon-box">👑</div>
+                  <span class="service-duration">150 Mins</span>
+                </div>
+                <h3 class="service-title">Hair & Makeup Packages</h3>
+                <p class="service-desc">The complete VIP suite experience. Simultaneous senior hair designer and master makeup artist for seamless luxury transformation.</p>
+              </div>
+              <div class="service-footer-row">
+                <div>
+                  <span class="service-price">$360</span>
+                  <span class="service-price-note">/ package</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.openBookingForService('Hair & Makeup Packages')">Book Look</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. SIGNATURE LOOKS (BENTO GRID)
+         ==================================================================== -->
+    <section class="section" id="looks">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-aurora">Couture Portfolio</span>
+          <h2 class="section-title" style="margin-top: 0.75rem;">Find Your Signature Look</h2>
+          <p class="section-subtitle">
+            Explore our eight iconic aesthetic directions, each formulated with precise color harmony, skin illumination, and bespoke elegance.
+          </p>
+        </div>
+
+        <div class="bento-looks-grid">
+          
+          <!-- 1. Natural Glow (Span 2x2 Bento Hero) -->
+          <div class="bento-look-card bento-span-2x2" onclick="window.openBookingForService('Signature Makeup')">
+            <img src="images/photo3.jpg" alt="Natural Glow Signature Look" class="bento-look-bg" loading="lazy">
+            <div class="bento-look-overlay">
+              <span class="look-tag-chip">Iconic Classic</span>
+              <h3 class="bento-look-title">Natural Glow</h3>
+              <p class="bento-look-desc">Hyper-dewy glass skin, feathered organic brows, soft-focus cream warmth, and nourishing peptide lip glaze.</p>
+            </div>
+          </div>
+
+          <!-- 2. Soft Glam -->
+          <div class="bento-look-card" onclick="window.openBookingForService('Party Makeup')">
+            <img src="images/photo1.jpg" alt="Soft Glam Look" class="bento-look-bg" loading="lazy">
+            <div class="bento-look-overlay">
+              <span class="look-tag-chip">Red Carpet</span>
+              <h3 class="bento-look-title">Soft Glam</h3>
+              <p class="bento-look-desc">Velvety nude pigments, softly smoked winged shadow, and luminous cheek elevation.</p>
+            </div>
+          </div>
+
+          <!-- 3. Modern Classic -->
+          <div class="bento-look-card" onclick="window.openBookingForService('Signature Makeup')">
+            <img src="images/photo7.jpg" alt="Modern Classic Look" class="bento-look-bg" loading="lazy">
+            <div class="bento-look-overlay">
+              <span class="look-tag-chip">Timeless</span>
+              <h3 class="bento-look-title">Modern Classic</h3>
+              <p class="bento-look-desc">Impeccable satin skin, precision feline eyeliner, and statement crimson lips.</p>
+            </div>
+          </div>
+
+          <!-- 4. Red Carpet (Span 2x1) -->
+          <div class="bento-look-card bento-span-2x1" onclick="window.openBookingForService('Photoshoot Makeup')">
+            <img src="images/photo5.jpg" alt="WOLFPix Red Carpet Dynamic Hair Look" class="bento-look-bg" loading="lazy">
+            <div class="bento-look-overlay">
+              <span class="look-tag-chip">High Glamour</span>
+              <h3 class="bento-look-title">Red Carpet</h3>
+              <p class="bento-look-desc">High-definition multidimensional contour, spotlight eye sheen, and flash-resistant setting.</p>
+            </div>
+          </div>
+
+          <!-- 5. Birthday Glow -->
+          <div class="bento-look-card" onclick="window.openBookingForService('Birthday Makeup')">
+            <img src="images/photo6.jpg" alt="Birthday Glow Look" class="bento-look-bg" loading="lazy">
+            <div class="bento-look-overlay">
+              <span class="look-tag-chip">Celebration</span>
+              <h3 class="bento-look-title">Birthday Glow</h3>
+              <p class="bento-look-desc">Champagne highlighters, flushed peach cheeks, and sparkling evening eyes.</p>
+            </div>
+          </div>
+
+          <!-- 6. Bridal Elegance -->
+          <div class="bento-look-card" onclick="window.openBookingForService('Bridal Makeup')">
+            <img src="images/photo4.jpg" alt="WOLFPix Bridal Elegance Look" class="bento-look-bg" loading="lazy">
+            <div class="bento-look-overlay">
+              <span class="look-tag-chip">Couture Bride</span>
+              <h3 class="bento-look-title">Bridal Elegance</h3>
+              <p class="bento-look-desc">Ethereal soft-focus veil, tear-proof endurance, and romantic dusty rose accents.</p>
+            </div>
+          </div>
+
+          <!-- 7. Editorial Beauty -->
+          <div class="bento-look-card" onclick="window.openBookingForService('Editorial Makeup')">
+            <img src="images/photo2.jpg" alt="WOLFPix Editorial Beauty Look" class="bento-look-bg" loading="lazy">
+            <div class="bento-look-overlay">
+              <span class="look-tag-chip">Avant-Garde</span>
+              <h3 class="bento-look-title">Editorial Beauty</h3>
+              <p class="bento-look-desc">Bold graphic eyeliner, holographic glass sheen, and unconventional high-fashion textures.</p>
+            </div>
+          </div>
+
+          <!-- 8. Timeless Beauty -->
+          <div class="bento-look-card" onclick="window.openBookingForService('Age-Defying Makeup')">
+            <img src="images/photo3.jpg" alt="Timeless Beauty Look" class="bento-look-bg" loading="lazy">
+            <div class="bento-look-overlay">
+              <span class="look-tag-chip">Ageless Vitality</span>
+              <h3 class="bento-look-title">Timeless Beauty</h3>
+              <p class="bento-look-desc">Featherweight serum base, targeted micro-concealing, and natural radiant eye-lift.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. SKIN TONE & TEXTURE — "MADE FOR YOUR SKIN"
+         ==================================================================== -->
+    <section class="section skin-matrix-section" id="skin-matrix">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-gold">Custom Diagnostic Science</span>
+          <h2 class="section-title" style="margin-top: 0.75rem;">Made For Your Skin.</h2>
+          <p class="section-subtitle">
+            Universal beauty does not exist. We systematically dissect nine biological parameters to engineer an individualized complexion formulation.
+          </p>
+        </div>
+
+        <div class="skin-bento-grid">
+          <!-- 1. Skin Tone -->
+          <div class="skin-feature-card">
+            <div class="skin-feature-icon">✨</div>
+            <h3 class="skin-feature-title">Skin Tone Spectrum</h3>
+            <p class="skin-feature-desc">From fair porcelain to deep espresso ebony, our pigments are matched under multi-spectrum daylight LEDs.</p>
+            <div class="skin-swatch-row">
+              <span class="skin-swatch-dot" style="background: #FDF0E6;"></span>
+              <span class="skin-swatch-dot" style="background: #F3D0B5;"></span>
+              <span class="skin-swatch-dot" style="background: #D9A066;"></span>
+              <span class="skin-swatch-dot" style="background: #A66E38;"></span>
+              <span class="skin-swatch-dot" style="background: #5C3A21;"></span>
+              <span class="skin-swatch-dot" style="background: #2C1B12;"></span>
+            </div>
+          </div>
+
+          <!-- 2. Undertone Mastery -->
+          <div class="skin-feature-card">
+            <div class="skin-feature-icon">🎨</div>
+            <h3 class="skin-feature-title">Undertone Mastery</h3>
+            <p class="skin-feature-desc">Neutralizing unwanted color casts by calibrating cool rosy, golden warm, peachy, and elusive olive undertones.</p>
+            <div class="badge badge-aurora" style="margin-top: 0.5rem;">Zero Ashiness or Oxidation</div>
+          </div>
+
+          <!-- 3. Skin Texture -->
+          <div class="skin-feature-card">
+            <div class="skin-feature-icon">🧬</div>
+            <h3 class="skin-feature-title">Skin Texture Balancing</h3>
+            <p class="skin-feature-desc">Micro-smoothing textured skin, acne scarring, or bumps with optical diffusion spheres rather than heavy spackle.</p>
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--electric-blue);">Light-Deflecting Silicon-Free Primers</span>
+          </div>
+
+          <!-- 4. Hydration & Dryness -->
+          <div class="skin-feature-card">
+            <div class="skin-feature-icon">💧</div>
+            <h3 class="skin-feature-title">Hydration & Dryness Relief</h3>
+            <p class="skin-feature-desc">Replenishing dehydrated barriers with squalane and ceramides to prevent makeup from flaking or settling.</p>
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--royal-purple);">Intracellular Moisture Locking</span>
+          </div>
+
+          <!-- 5. Oiliness & T-Zone Control -->
+          <div class="skin-feature-card">
+            <div class="skin-feature-icon">⚡</div>
+            <h3 class="skin-feature-title">Oiliness & Sebum Control</h3>
+            <p class="skin-feature-desc">Targeted silica micro-setting that absorbs midday shine while leaving perimeter radiance completely intact.</p>
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--cyan);">16-Hour Temperature Proof</span>
+          </div>
+
+          <!-- 6. Fine Lines & Pores -->
+          <div class="skin-feature-card">
+            <div class="skin-feature-icon">⏳</div>
+            <h3 class="skin-feature-title">Fine Lines & Pore Refinement</h3>
+            <p class="skin-feature-desc">Utilizing self-leveling fluid emulsions that glide over pores and smile lines with zero creasing or settling.</p>
+            <span style="font-size: 0.8rem; font-weight: 600; color: #D4AF6A;">Strategic Zero-Bake Method</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. BEAUTY CONSULTATION (INTERACTIVE 8-STEP QUIZ)
+         ==================================================================== -->
+    <section class="section consultation-section" id="consultation">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-aurora">Algorithmic Precision</span>
+          <h2 class="section-title" style="margin-top: 0.75rem;">Interactive Beauty Consultation</h2>
+          <p class="section-subtitle">
+            Answer 8 tailored diagnostic questions to receive your personalized skincare prep formula, coverage strategy, and signature look archetype.
+          </p>
+        </div>
+
+        <div class="quiz-card-wrapper" id="quizCardWrapper">
+          <!-- Progress Bar -->
+          <div class="quiz-progress-bar-container">
+            <div class="quiz-progress-fill" id="quizProgressBar"></div>
+          </div>
+
+          <!-- Questions Screen -->
+          <div id="quizQuestionsBox">
+            <div class="quiz-step-meta">
+              <span class="quiz-step-indicator" id="quizStepIndicator">Question 1 of 8</span>
+              <span class="badge badge-gold" style="font-size: 0.72rem;">WOLFPix Beauty AI Engine</span>
+            </div>
+
+            <h3 class="quiz-question-title" id="quizQuestionTitle">1. What is your skin type?</h3>
+            <p id="quizQuestionSubtitle" style="color: var(--text-muted); font-size: 0.95rem; margin-top: -1.25rem; margin-bottom: 2rem;">
+              Assessing your baseline hydration and sebum dynamics.
+            </p>
+
+            <div class="quiz-options-grid" id="quizOptionsGrid">
+              <!-- Rendered via JS -->
+            </div>
+
+            <div class="quiz-controls-row">
+              <button type="button" class="btn btn-glass btn-sm" id="quizPrevBtn">← Back</button>
+              <button type="button" class="btn btn-primary" id="quizNextBtn">Next Step →</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Result Screen -->
+          <div class="quiz-result-box" id="quizResultBox">
+            <div class="result-header-card">
+              <span class="badge badge-gold">Diagnostic Complete</span>
+              <h3 class="result-archetype-title gradient-text" id="resultArchetypeTitle">The Soft Glam Blueprint</h3>
+              <p style="color: var(--text-secondary); max-width: 580px; margin-inline: auto;">
+                Here is your bespoke WOLFPix formulation based on your skin profile, preferred coverage, and celebration attire.
+              </p>
+            </div>
+
+            <div class="result-grid-breakdown">
+              <div class="result-pill-card">
+                <h5>Skin Prep Formula</h5>
+                <p id="resultSkinPrepFormula">Ceramide Moisture Infusion + Dew Seal</p>
+              </div>
+              <div class="result-pill-card">
+                <h5>Complexion & Base</h5>
+                <p id="resultComplexionFormula">Medium weightless buildable with light-diffusing velvet finish</p>
+              </div>
+              <div class="result-pill-card">
+                <h5>Focal Emphasis</h5>
+                <p id="resultFocusFormula">Lifted cheekbones and softly defined feline eye structure</p>
+              </div>
+            </div>
+
+            <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <button type="button" class="btn btn-aurora btn-lg" id="resultBookBtn">
+                Book Your Personalized Consultation
+              </button>
+              <button type="button" class="btn btn-glass btn-sm" id="quizRestartBtn" style="border: none;">
+                ↺ Retake Consultation
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         9. BEFORE & AFTER TRANSFORMATION
+         ==================================================================== -->
+    <section class="section transformation-section" id="transformation">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-gold">Artistry Showcase</span>
+          <h2 class="section-title" style="margin-top: 0.75rem;">Natural Refinement</h2>
+          <p class="section-subtitle">
+            Drag the interactive slider to experience how professional makeup artistry enhances natural bone structure, balances skin tone, and creates luminous radiance.
+          </p>
+        </div>
+
+        <div class="comparison-wrapper" id="comparisonContainer">
+          <div class="comparison-container">
+            <!-- After Image (Background) -->
+            <img 
+              src="images/photo3.jpg" 
+              alt="WOLFPix Finished Luxury Makeup Artistry" 
+              class="comparison-img"
+              id="comparisonAfterImg"
+              loading="lazy"
+            >
+            <span class="comparison-label label-after">WOLFPix Finished Look</span>
+
+            <!-- Before Layer (Foreground Clipped) -->
+            <div class="comparison-before-layer" id="comparisonBeforeLayer">
+              <img 
+                src="images/photo6.jpg" 
+                alt="Bare Skin & Hair Styling Preparation" 
+                class="comparison-img"
+                id="comparisonBeforeImg"
+                loading="lazy"
+              >
+              <span class="comparison-label label-before">Salon Prep & Styling</span>
+            </div>
+
+            <!-- Draggable Handle -->
+            <div class="comparison-handle" id="comparisonHandle" tabindex="0" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Before and After Comparison Drag Handle">
+              <div class="handle-line"></div>
+              <div class="handle-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline><polyline points="9 18 3 12 9 6"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: -8px;"><polyline points="9 18 15 12 9 6"></polyline><polyline points="15 18 21 12 15 6"></polyline></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 1.5rem;">
+          Drag slider horizontally or swipe on mobile to inspect skin texture and pigment fusion.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         10. TESTIMONIALS SECTION
+         ==================================================================== -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-aurora">Client Experiences</span>
+          <h2 class="section-title" style="margin-top: 0.75rem;">Words from Our Patrons</h2>
+          <p class="section-subtitle">
+            From red carpet galas to intimate wedding ceremonies, discover how WOLFPix clients felt in their own skin.
+          </p>
+        </div>
+
+        <div class="testimonials-carousel" id="testimonialsCarousel">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">
+                “For my 50th birthday gala, I wanted to look radiant and youthful without feeling caked in heavy foundation. WOLFPix created magic—my skin looked luminous, lifted, and authentic. I have never received so many compliments in my life.”
+              </blockquote>
+            </div>
+            <div class="testimonial-author-row">
+              <img src="images/photo1.jpg" alt="Victoria Sterling" class="testimonial-avatar" loading="lazy">
+              <div class="testimonial-author-info">
+                <h4>Victoria Sterling</h4>
+                <p>50th Birthday Celebration • Timeless Beauty</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">
+                “Finding an artist who truly understands olive undertones has always been a nightmare. WOLFPix custom-mixed my shade right in front of me. The makeup lasted through 12 hours of tears, dancing, and high-flash bridal photos.”
+              </blockquote>
+            </div>
+            <div class="testimonial-author-row">
+              <img src="images/photo4.jpg" alt="Camille Rodriguez" class="testimonial-avatar" loading="lazy">
+              <div class="testimonial-author-info">
+                <h4>Camille Rodriguez</h4>
+                <p>Bridal Couture Package • Haute Bride</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">
+                “The level of precision is unmatched. The studio ambiance feels like an Apple design lab merged with a Parisian atelier. The skin prep ritual alone was worth every single dollar.”
+              </blockquote>
+            </div>
+            <div class="testimonial-author-row">
+              <img src="images/photo2.jpg" alt="Julian Laurent" class="testimonial-avatar" loading="lazy">
+              <div class="testimonial-author-info">
+                <h4>Julian Laurent</h4>
+                <p>Editorial Campaign Director • Vogue Paris</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-quote">
+                “I booked the interactive consultation first and then the signature glam for our charity ball. The personalized blueprint took all anxiety away. WOLFPix is in a league of its own.”
+              </blockquote>
+            </div>
+            <div class="testimonial-author-row">
+              <img src="images/photo5.jpg" alt="Eleanor Vance-Smyth" class="testimonial-avatar" loading="lazy">
+              <div class="testimonial-author-info">
+                <h4>Eleanor Vance-Smyth</h4>
+                <p>Gala Patron • Red Carpet Glamour</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         11. BEAUTY JOURNAL (EDITORIAL ARTICLES)
+         ==================================================================== -->
+    <section class="section journal-section" id="journal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge badge-gold">Editorial Knowledge</span>
+          <h2 class="section-title" style="margin-top: 0.75rem;">The Beauty Journal</h2>
+          <p class="section-subtitle">
+            Deep dives into master techniques, color chemistry, and skincare preparation written by the WOLFPix Salon Senior Artistry Council.
+          </p>
+        </div>
+
+        <div class="journal-grid">
+          
+          <!-- Article 1 -->
+          <article class="journal-card" data-article-key="prep">
+            <div class="journal-card-media">
+              <img src="images/photo7.jpg" alt="How to Prepare Your Skin Before Makeup" class="journal-img" loading="lazy">
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta-row">
+                <span style="color: var(--electric-blue); font-weight: 700;">Skincare Guidance</span> • <span>4 min read</span>
+              </div>
+              <h3 class="journal-title">How to Prepare Your Skin Before Makeup</h3>
+              <p class="journal-excerpt">Discover our 3-step ritual of cryo-sculpting, hyaluronic saturation, and zoned priming that ensures zero cakeiness.</p>
+              <span class="journal-read-link">Read Full Editorial →</span>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="journal-card" data-article-key="undertone">
+            <div class="journal-card-media">
+              <img src="images/photo3.jpg" alt="Choosing Makeup for Your Skin Undertone" class="journal-img" loading="lazy">
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta-row">
+                <span style="color: var(--royal-purple); font-weight: 700;">Color Theory</span> • <span>5 min read</span>
+              </div>
+              <h3 class="journal-title">Choosing Makeup for Your Skin Undertone</h3>
+              <p class="journal-excerpt">How to decode cool, warm, olive, and neutral pigments to prevent gray cast, flashback, and midday foundation oxidation.</p>
+              <span class="journal-read-link">Read Full Editorial →</span>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="journal-card" data-article-key="mature">
+            <div class="journal-card-media">
+              <img src="images/photo1.jpg" alt="Makeup Tips for Mature Skin" class="journal-img" loading="lazy">
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta-row">
+                <span style="color: #D4AF6A; font-weight: 700;">Timeless Artistry</span> • <span>6 min read</span>
+              </div>
+              <h3 class="journal-title">Makeup Tips for Mature Skin</h3>
+              <p class="journal-excerpt">Strategic cream textures, soft focus optical diffusers, and featherweight concealing designed for ageless elegance.</p>
+              <span class="journal-read-link">Read Full Editorial →</span>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="journal-card" data-article-key="lasting">
+            <div class="journal-card-media">
+              <img src="images/photo2.jpg" alt="How to Make Makeup Last Longer" class="journal-img" loading="lazy">
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta-row">
+                <span style="color: var(--cyan); font-weight: 700;">Technique & Endurance</span> • <span>4 min read</span>
+              </div>
+              <h3 class="journal-title">How to Make Makeup Last Longer</h3>
+              <p class="journal-excerpt">The sandwich layering method, micro-setting with silica, and thermal barrier mists for 16-hour red carpet wear.</p>
+              <span class="journal-read-link">Read Full Editorial →</span>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="journal-card" data-article-key="trends">
+            <div class="journal-card-media">
+              <img src="images/photo5.jpg" alt="Current Beauty Trends" class="journal-img" loading="lazy">
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta-row">
+                <span style="color: var(--electric-blue); font-weight: 700;">Trend Forecast</span> • <span>5 min read</span>
+              </div>
+              <h3 class="journal-title">Current Beauty Trends</h3>
+              <p class="journal-excerpt">The transition toward cloud skin, warm espresso contouring, and vinyl peptide lip glazes in haute beauty.</p>
+              <span class="journal-read-link">Read Full Editorial →</span>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="journal-card" data-article-key="foundation">
+            <div class="journal-card-media">
+              <img src="images/photo6.jpg" alt="Choosing the Right Foundation" class="journal-img" loading="lazy">
+            </div>
+            <div class="journal-body">
+              <div class="journal-meta-row">
+                <span style="color: var(--rose-champagne); font-weight: 700;">Product Chemistry</span> • <span>5 min read</span>
+              </div>
+              <h3 class="journal-title">Choosing the Right Foundation</h3>
+              <p class="journal-excerpt">Understanding formulation vehicles: squalane serums vs. water-gel emulsions vs. high-definition velvet bases.</p>
+              <span class="journal-read-link">Read Full Editorial →</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         12. APPOINTMENT BOOKING EXPERIENCE
+         ==================================================================== -->
+    <section class="section booking-section" id="booking">
+      <div class="container">
+        <div class="booking-card-wrapper">
+          <div class="booking-aurora-glow"></div>
+          <div class="booking-grid">
+            <!-- Left Info Column -->
+            <div class="booking-info-col">
+              <span class="badge badge-gold" style="background: rgba(212, 175, 106, 0.2); color: #F5E7E4;">Private Suite Reservations</span>
+              <h2 class="display-title" style="margin-top: 1rem; margin-bottom: 1.25rem; font-size: clamp(2.2rem, 4vw, 3.5rem); color: white;">
+                Reserve Your <br><span class="gradient-text">Transformation.</span>
+              </h2>
+              <p style="color: var(--text-dim); line-height: 1.7; font-size: 1.05rem; margin-bottom: 2rem;">
+                Experience private artistry suites equipped with customized daylight lighting, chilled botanical refreshments, and dedicated senior artists.
+              </p>
+
+              <div class="booking-perks-list">
+                <div class="booking-perk-item">
+                  <span class="booking-perk-icon">✓</span>
+                  <span>Complimentary 15-minute skin barrier & undertone diagnostic</span>
+                </div>
+                <div class="booking-perk-item">
+                  <span class="booking-perk-icon">✓</span>
+                  <span>Bespoke touch-up lipstick vial & luxury silk lash kit included</span>
+                </div>
+                <div class="booking-perk-item">
+                  <span class="booking-perk-icon">✓</span>
+                  <span>Private suite with customizable music & ambient lighting</span>
+                </div>
+                <div class="booking-perk-item">
+                  <span class="booking-perk-icon">✓</span>
+                  <span>100% Satisfaction & 16-Hour Wear Longevity Guarantee</span>
+                </div>
+              </div>
+
+              <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;">VIP Concierge Direct Line</div>
+                <div style="font-size: 1.35rem; font-weight: 700; color: white; margin-top: 0.25rem;">+1 (800) 965-3749</div>
+              </div>
+            </div>
+
+            <!-- Right Booking Form -->
+            <form class="booking-form" id="bookingForm" aria-label="Appointment Reservation Form">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="bookingName" class="form-label">Full Name *</label>
+                  <input type="text" id="bookingName" class="form-input" placeholder="e.g. Victoria Sterling" required>
+                </div>
+                <div class="form-group">
+                  <label for="bookingPhone" class="form-label">Phone Number *</label>
+                  <input type="tel" id="bookingPhone" class="form-input" placeholder="+1 (555) 000-0000" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="bookingEmail" class="form-label">Email Address *</label>
+                <input type="email" id="bookingEmail" class="form-input" placeholder="victoria@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="bookingService" class="form-label">Select Service *</label>
+                <select id="bookingService" class="form-select" required>
+                  <option value="" disabled selected>Choose a luxury experience...</option>
+                  <option value="Signature Makeup">Signature Makeup ($185 • 75 min)</option>
+                  <option value="Party Makeup">Party Makeup ($210 • 90 min)</option>
+                  <option value="Birthday Makeup">Birthday Makeup ($195 • 75 min)</option>
+                  <option value="Bridal Makeup">Bridal Makeup ($380 • 120 min)</option>
+                  <option value="Engagement Makeup">Engagement Makeup ($225 • 80 min)</option>
+                  <option value="Editorial Makeup">Editorial Makeup ($295 • 105 min)</option>
+                  <option value="Photoshoot Makeup">Photoshoot Makeup ($240 • 90 min)</option>
+                  <option value="Age-Defying Makeup">Age-Defying Makeup ($220 • 85 min)</option>
+                  <option value="Skin Preparation">Skin Preparation ($110 • 45 min)</option>
+                  <option value="Makeup Consultation">Makeup Consultation ($150 • 60 min)</option>
+                  <option value="Hair Styling">Hair Styling ($140 • 60 min)</option>
+                  <option value="Hair & Makeup Packages">Hair & Makeup VIP Package ($360 • 150 min)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="bookingDate" class="form-label">Preferred Date *</label>
+                <input type="date" id="bookingDate" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Preferred Time Slot *</label>
+                <div class="time-slots-grid" id="timeSlotsGrid">
+                  <button type="button" class="time-slot-btn" data-time="09:30 AM">09:30 AM</button>
+                  <button type="button" class="time-slot-btn active" data-time="11:00 AM">11:00 AM</button>
+                  <button type="button" class="time-slot-btn" data-time="01:30 PM">01:30 PM</button>
+                  <button type="button" class="time-slot-btn" data-time="03:00 PM">03:00 PM</button>
+                  <button type="button" class="time-slot-btn" data-time="05:00 PM">05:00 PM</button>
+                  <button type="button" class="time-slot-btn" data-time="06:30 PM">06:30 PM</button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="bookingRequests" class="form-label">Special Requests or Occasion Notes</label>
+                <textarea id="bookingRequests" class="form-textarea" rows="2" placeholder="e.g. Attending 50th birthday gala, silk gown, dry skin prep requested..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-aurora btn-lg" style="width: 100%; margin-top: 0.5rem;" id="submitBookingBtn">
+                <span>Book Appointment</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+
+              <div style="text-align: center; font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;">
+                🔒 Secure reservation with 24-hour flexible rescheduling policy.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         13. CONTACT & LOCATION
+         ==================================================================== -->
+    <section class="section" id="contact" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="glass-card" style="padding: clamp(2rem, 4vw, 3.5rem);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; align-items: center;">
+            <div>
+              <span class="badge badge-aurora">Atelier Location</span>
+              <h3 style="font-size: 1.85rem; font-weight: 700; margin-block: 0.75rem;">Visit the Studio</h3>
+              <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+                Located in the heart of the luxury design quarter, WOLFPix Salon welcomes you into an oasis of calm minimalism and artistic mastery.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem;">
+                <div>📍 <strong>Address:</strong> 450 Haute Avenue, Suite 800, New York, NY 10022</div>
+                <div>⏰ <strong>Hours:</strong> Tuesday – Sunday • 9:00 AM – 8:00 PM</div>
+                <div>✉️ <strong>VIP Inquiries:</strong> concierge@wolfpixsalon.com</div>
+              </div>
+            </div>
+            <div style="background: var(--surface-dark); border-radius: var(--radius-lg); padding: 2rem; color: white;">
+              <h4 style="color: white; font-size: 1.2rem; margin-bottom: 0.75rem;">Private Event Bookings</h4>
+              <p style="font-size: 0.875rem; color: var(--text-dim); line-height: 1.6; margin-bottom: 1.25rem;">
+                Host your bridal party, milestone birthday glam squad, or fashion photoshoot with full private studio buyouts and champagne service.
+              </p>
+              <a href="#booking" class="btn btn-glass-dark btn-sm">Inquire for Private Events →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         14. FOOTER
+         ==================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top-grid">
+          <!-- Brand Column -->
+          <div class="footer-brand-col">
+            <div class="brand-logo" style="color: white;">
+              <span class="brand-symbol">W</span>
+              <span class="brand-text">WOLFPix <span class="gradient-text">Salon</span></span>
+            </div>
+            <p>
+              Where Beauty Meets Precision. Modern beauty and timeless confidence engineered for the modern era.
+            </p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem;">
+              <a href="#" aria-label="Instagram" style="color: var(--text-dim); font-size: 1.1rem;">IG</a>
+              <a href="#" aria-label="Pinterest" style="color: var(--text-dim); font-size: 1.1rem;">PIN</a>
+              <a href="#" aria-label="TikTok" style="color: var(--text-dim); font-size: 1.1rem;">TT</a>
+              <a href="#" aria-label="YouTube" style="color: var(--text-dim); font-size: 1.1rem;">YT</a>
+            </div>
+          </div>
+
+          <!-- Services Links -->
+          <div>
+            <h4 class="footer-col-title">Services</h4>
+            <ul class="footer-links-list">
+              <li><a href="#services" class="footer-link">Signature Makeup</a></li>
+              <li><a href="#services" class="footer-link">Party & Birthday Glam</a></li>
+              <li><a href="#services" class="footer-link">Bridal & Engagement</a></li>
+              <li><a href="#timeless" class="footer-link">Age-Defying Protocol</a></li>
+              <li><a href="#services" class="footer-link">Editorial Artistry</a></li>
+              <li><a href="#services" class="footer-link">Hair & Makeup Packages</a></li>
+            </ul>
+          </div>
+
+          <!-- Studio & Editorial -->
+          <div>
+            <h4 class="footer-col-title">Studio & Journal</h4>
+            <ul class="footer-links-list">
+              <li><a href="#artistry" class="footer-link">Artistry Philosophy</a></li>
+              <li><a href="#looks" class="footer-link">Signature Looks Bento</a></li>
+              <li><a href="#skin-matrix" class="footer-link">Skin Tone Matrix</a></li>
+              <li><a href="#consultation" class="footer-link">Beauty Consultation</a></li>
+              <li><a href="#journal" class="footer-link">The Beauty Journal</a></li>
+              <li><a href="#testimonials" class="footer-link">Client Stories</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Column -->
+          <div>
+            <h4 class="footer-col-title">Haute Gazette</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.5;">
+              Subscribe to receive private salon invitations, seasonal beauty forecasts, and bespoke masterclasses.
+            </p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Your email address..." required>
+              <button type="submit" class="btn btn-aurora btn-sm">Join</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom-row">
+          <div>© 2026 WOLFPix Salon. All rights reserved. “Where Beauty Meets Precision.”</div>
+          <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="admin.html" class="footer-link" style="color: var(--cyan); font-weight: 600;">✦ Studio Management Suite</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms of Service</a>
+            <a href="#" class="footer-link">Accessibility</a>
+            <a href="#" class="footer-link">Studio Guidelines</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ====================================================================
+         15. MODALS
+         ==================================================================== -->
+    <!-- Instant Search Modal -->
+    <div class="modal-backdrop" id="searchModal" role="dialog" aria-modal="true" aria-label="Search Salon Directory">
+      <div class="modal-window search-modal-box">
+        <button type="button" class="modal-close-btn" id="searchModalClose" aria-label="Close Search">✕</button>
+        <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem;">Search WOLFPix Salon</h3>
+        
+        <div class="search-input-wrap">
+          <span class="search-input-icon">🔍</span>
+          <input type="text" class="search-modal-input" id="searchModalInput" placeholder="Search services, signature looks, skincare guides..." autocomplete="off">
+        </div>
+
+        <div class="search-results-list" id="searchResultsList">
+          <!-- Populated dynamically via search-modal.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal-backdrop" id="confirmationModal" role="dialog" aria-modal="true" aria-label="Booking Confirmation">
+      <div class="modal-window">
+        <button type="button" class="modal-close-btn" id="confirmationModalClose" aria-label="Close Confirmation">✕</button>
+        <div class="confirmation-content">
+          <div class="confirm-check-icon">✓</div>
+          <span class="badge badge-gold" style="margin-bottom: 0.5rem;">Reservation Confirmed</span>
+          <h3 style="font-size: 1.85rem; font-weight: 800; margin-bottom: 0.5rem;">We Can’t Wait to Welcome You.</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; max-width: 480px; margin-inline: auto;">
+            Your luxury appointment has been reserved in our private studio suite. A confirmation email and calendar invitation have been sent.
+          </p>
+
+          <div class="booking-summary-card">
+            <div class="summary-row">
+              <span>Booking Reference:</span>
+              <strong id="confirmRefCode" class="gradient-text">WPX-8924</strong>
+            </div>
+            <div class="summary-row">
+              <span>Client Name:</span>
+              <strong id="confirmClientName">Victoria Sterling</strong>
+            </div>
+            <div class="summary-row">
+              <span>Reserved Service:</span>
+              <strong id="confirmService">Signature Makeup</strong>
+            </div>
+            <div class="summary-row">
+              <span>Date & Time:</span>
+              <strong id="confirmDateTime">Tomorrow at 11:00 AM</strong>
+            </div>
+            <div class="summary-row">
+              <span>Studio Location:</span>
+              <strong>450 Haute Avenue, Suite 800, NY</strong>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-aurora btn-lg" id="confirmDoneBtn" style="width: 100%;">
+            Done & Return to Studio
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Editorial Journal Reader Modal -->
+    <div class="modal-backdrop" id="journalModal" role="dialog" aria-modal="true" aria-label="Journal Article Reader">
+      <div class="modal-window" style="max-width: 780px; padding: clamp(2rem, 4vw, 3.25rem);">
+        <button type="button" class="modal-close-btn" id="journalModalClose" aria-label="Close Reader">✕</button>
+        <div id="journalModalMeta" class="journal-meta-row" style="margin-bottom: 1rem;"></div>
+        <h2 id="journalModalTitle" style="font-size: clamp(1.75rem, 3vw, 2.4rem); font-weight: 800; line-height: 1.2; margin-bottom: 2rem;"></h2>
+        <div id="journalModalBody" class="journal-modal-content"></div>
+        <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: space-between;">
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Ready to experience this firsthand?</span>
+          <a href="#booking" class="btn btn-primary btn-sm" onclick="document.getElementById('journalModal').classList.remove('active'); document.body.style.overflow='';">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
