@@ -1427,6 +1427,35 @@
   gap: 0.4rem;
 }
 
+/* Journal Modal Article Content */
+.journal-modal-content {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #94A3B8;
+}
+
+.journal-modal-content p {
+  margin-bottom: 1.25rem;
+}
+
+.journal-modal-content h4 {
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.journal-modal-content strong {
+  color: #F1F5F9;
+  font-weight: 600;
+}
+
+/* Strong text inside dark modals should be visible */
+.modal-window strong {
+  color: var(--text-light);
+}
+
 /* --------------------------------------------------------------------------
    12. BOOKING SECTION & FORM
    -------------------------------------------------------------------------- */

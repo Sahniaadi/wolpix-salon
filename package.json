@@ -1,0 +1,16 @@
+{
+  "name": "wolfpix-salon",
+  "version": "1.0.0",
+  "description": "WOLFPix Salon — Luxury Beauty & Makeup Studio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["salon", "makeup", "beauty", "luxury"],
+  "author": "WOLFPix Studio",
+  "license": "MIT"
+}
